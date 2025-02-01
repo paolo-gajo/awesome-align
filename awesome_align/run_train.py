@@ -47,6 +47,8 @@ import itertools
 
 class LineByLineTextDataset(Dataset):
     def __init__(self, tokenizer: PreTrainedTokenizer, args, file_path, gold_path):
+        print('file_path', file_path)
+        print('gold_path', gold_path)
         assert os.path.isfile(file_path)
         logger.info("Creating features from dataset file at %s", file_path)
 
